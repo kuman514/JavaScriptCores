@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이벤트 위임</title>
+  </head>
+  <body>
+    <div id="content">
+      <div id="status">
+        아직 아무것도 입력되지 않음
+      </div>
+      <!-- 이벤트 위임이란, 이벤트 리스너를 부모 엘리먼트에 부여하는 것을 말한다. -->
+      <!-- 자식 엘리먼트에서 이벤트 발생 시, 이벤트 버블링 때문에 부모 엘리먼트에 연결된 리스너가 실행된다. -->
+      <!-- 이 테크닉을 활용하면, 메모리가 절약되며,
+        이벤트가 발생해야 할 엘리먼트마다 리스너를 부여할 필요 없이 부모 엘리먼트에만 부여하면 된다.
+        이벤트가 발생하는 엘리먼트가 추가/제거 될 때마다 리스너를 추가/삭제할 필요도 없다.
+      -->
+      <div id="buttons">
+        <button id="1">1번 버튼</button>
+        <button id="2">2번 버튼</button>
+        <button id="3">3번 버튼</button>
+        <button id="4">4번 버튼</button>
+        <button id="5">5번 버튼</button>
+      </div>
+    </div>
+    <script>
+      document.getElementById('buttons').addEventListener("click", e => {
+        // e.target은 클릭된 엘리먼트이다.
+        // 클릭된 엘리먼트의 nodeName이 'BUTTON'일 때, '#status'의 내용을 변화시키자.
+        if (e.target && e.target.nodeName === 'BUTTON') {
+          document.getElementById('status').innerText = `버튼 ${e.target.id} 눌려짐`
+        }
+      })
+    </script>
+  </body>
+</html>
