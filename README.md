@@ -3,12 +3,12 @@
 저 자신의 능률 향상을 위해 만들었지만, 혹시 보시게 될 여러분께도 도움이 된다면 저도 기쁠 것입니다.
 
 # My Listed Questions
-(준비 중...)
+[this 키워드의 동작 과정은 어떻게 되는가?](https://github.com/kuman514/JavaScriptCores/blob/main/this.html)
 
 # 참고할 자료
-<h2>한국어 문서</h2>
+한국어 문서   
 [프론트엔드 면접 핸드북 1](https://blog.rhostem.com/posts/2020-04-12-fe-interview-handbook-js-1)   
 [프론트엔드 면접 핸드북 2](https://blog.rhostem.com/posts/2020-04-13-fe-interview-handbook-js-2)   
 [프론트엔드 면접 핸드북 3](https://blog.rhostem.com/posts/2020-04-14-fe-interview-handbook-js-3)
-<h2>영어 원문</h2>
+영어 원문   
 [Frontend Interview Handbook - JavaScript Questions](https://github.com/yangshun/front-end-interview-handbook/blob/master/contents/en/javascript-questions.md)
