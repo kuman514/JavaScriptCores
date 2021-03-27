@@ -9,7 +9,8 @@
 [AMD와 CommonJS의 차이점은 무엇인가?](https://github.com/kuman514/JavaScriptCores/blob/main/AMD%20vs%20CommonJS.md)   
 [JavaScript에서의 IIFE(Immediately Invoked Function Expressions) 사용법](https://github.com/kuman514/JavaScriptCores/blob/main/function%20iife.html)   
 [null과 undefined와 선언되지 않은 변수 같의 차이점은 무엇인가?](https://github.com/kuman514/JavaScriptCores/blob/main/null%20undefined%20undeclared.html)   
-[클로저(closure)는 무엇이며, 왜 그리고 어떻게 쓰이는가?](https://github.com/kuman514/JavaScriptCores/blob/main/closure.html)
+[클로저(closure)는 무엇이며, 왜 그리고 어떻게 쓰이는가?](https://github.com/kuman514/JavaScriptCores/blob/main/closure.html)   
+[forEach와 map의 차이는 무엇인가?](https://github.com/kuman514/JavaScriptCores/blob/main/foreach%20map.html)
 
 # 참고할 자료
 한국어 문서   
