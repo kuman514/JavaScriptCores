@@ -5,7 +5,8 @@
 # My Listed Questions
 [이벤트 위임(Event Deligation)이란 무엇인가?](https://github.com/kuman514/JavaScriptCores/blob/main/event%20delegation.html)   
 [this 키워드의 동작 과정은 어떻게 되는가?](https://github.com/kuman514/JavaScriptCores/blob/main/this.html)   
-[JavaScript의 프로토타입 상속(Prototype Hierachy)은 어떻게 동작하는가?](https://github.com/kuman514/JavaScriptCores/blob/main/prototype%20hierachy.html)
+[JavaScript의 프로토타입 상속(Prototype Hierachy)은 어떻게 동작하는가?](https://github.com/kuman514/JavaScriptCores/blob/main/prototype%20hierachy.html)   
+[AMD와 CommonJS의 차이점은 무엇인가?](https://github.com/kuman514/JavaScriptCores/blob/main/AMD%20vs%20CommonJS.md)
 
 # 참고할 자료
 한국어 문서   
