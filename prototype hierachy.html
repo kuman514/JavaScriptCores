@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>프로토타입 상속</title>
+  </head>
+  <body>
+    <script>
+      // 모든 자바스크립트 객체는 __proto__라는 속성을 가지고 있다.
+      // 이는 객체의 원형(prototype)을 가리키는 것이다.
+
+      // 어떤 객체에서 한 속성을 찾으려 하는데, 그 속성이 해당 객체에 없으면,
+      // 그 객체의 __proto__ 속성, 즉 prototype에서 그 속성을 찾는다.
+      // 그 __proto__ 내에서도 해당 속성을 찾을 수 없으면,
+      // 계속해서 __proto__를 찾아가서 속성을 찾는 과정을 반복한다.
+
+      // 일반적인 상속보다는 위임에 더 가까운 형태.
+
+      if (typeof Object.create !== 'function') {
+        Object.create = function (parent) {
+          function Tmp () {}
+          Tmp.prototype = parent
+          return new Tmp()
+        }
+      }
+
+      const Parent = function () {
+        this.name = 'Parent'
+      }
+
+      Parent.prototype.greet = function () {
+        console.log(this)
+        console.log('Greeting From Parent')
+      }
+
+      const Child = Object.create(Parent.prototype)
+
+      Child.cry = function () {
+        console.log(this)
+        console.log('Woahhhhhhhhhh!')
+      }
+
+      // Child에 부여한 .cry() 함수
+      Child.cry()
+
+      // Child에는 없으나, Child의 __proto__인 Parent.prototype에서 .greet() 함수를 찾아 호출
+      Child.greet()
+    </script>
+  </body>
+</html>
