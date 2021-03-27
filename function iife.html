@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>함수 즉시 호출 표현식</title>
+  </head>
+  <body>
+    <script>
+      // IIFE는 Immediately Invoked Function Expressions의 약자로
+      // 함수를 즉시 호출하는 표현식이라는 의미를 지니고 있다.
+
+      // 하지만, 아래와 같은 형태로 코드를 입력하면
+      // 자바스크립트는 function 함수(){}와 ()로 나뉘어져 인식하므로
+      // 문법 오류가 발생하게 된다.
+      // VSCode에서 이 코드를 작성하면 미리 문법 오류를 인식하여 알려주고 있는 상태이다.
+      //function koishi(){console.log('adorable koishi')}();
+      // 에러 시 다음 코드가 실행되지 않아 주석 처리
+
+      // 함수 선언문을 소괄호로 둘러싸면
+      // 둘러싸인 함수 선언문을 자바스크립트는 함수 표현식으로 인식하므로
+      // 바로 뒤따르는 ()로 호출을 인식하므로 정상적으로 실행된다.
+      (function koishie(){console.log('koishie is berigoo!')})()
+      let koishiBerigoo = (function koishie(){return 'koishie is berigoo!'})()
+      console.log(koishiBerigoo);
+      // 소괄호로 둘러싼 IIFE를 연달아 쓰고자 할 때,
+      // IIFE 함수 사이를 intermediate value로 인식하는 문법 오류가 발생할 수 있으므로,
+      // 반드시 IIFE 함수 호출문 사이사이를 ;로 구분짓도록 한다.
+
+      // 소괄호로 둘러싼 함수는 전역 스코프에 노출되지 않으므로
+      // 불필요하다면 함수명을 생략할 수도 있다.
+      (function () {console.log('my name is kuman514')})()
+
+      // 소괄호로 둘러싸길 생략하는 대신 void 함수를 사용할 수도 있으나
+      // 이 경우 return값은 undefined로만 받을 수 밖에 없으니 유의할 것.
+      let kumanFoo = void function () {console.log(1); return 1}()
+      console.log(kumanFoo)
+    </script>
+  </body>
+</html>
