@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>익명 함수가 적용된 예시</title>
+  </head>
+  <body>
+    <div id="content">
+      <div id="quote"></div>
+      <button id="clickme">click</button>
+    </div>
+    <script>
+      // 익명 함수의 예시로 IIFE(즉시 호출 함수 표현식)와 callback 함수 등등이 있다.
+      // 두 사례 모두 다른 곳에서 참조할 일이 없는 경우가 대부분이다.
+
+      // IIFE 예시
+      (function (quote) {
+        document.getElementById('quote').innerText = quote
+      })('Koishi is an adorable baby!')
+      // 코드를 소괄호로 둘러싸서 전역 스코프에 함수 실행 코드와 변수를 노출시키지 않을 목적으로 쓰인다.
+      // 다른 곳에서 사용하지 않을 것이므로, 불필요한 함수명은 생략이 가능하다.
+
+      // callback 예시 (화살표 함수 사용 부분)
+      document.getElementById('clickme').addEventListener('click', () => {
+        document.getElementById('quote').innerText = 'clicked!'
+      })
+      // callback으로써의 함수는 재사용되지 않는 경우가 대부분이므로
+      // callback이 사용되는 위치에 직접 함수 선언을 하는 것이 가독성에도 좋다.
+    </script>
+  </body>
+</html>
