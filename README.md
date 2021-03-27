@@ -3,7 +3,7 @@
 저 자신의 능률 향상을 위해 만들었지만, 혹시 보시게 될 여러분께도 도움이 된다면 저도 기쁠 것입니다.
 
 # My Listed Questions
-[이벤트 위임(Event Deligation)이란 무엇인가?](https://github.com/kuman514/JavaScriptCores/blob/main/event%20delegation.html)
+[이벤트 위임(Event Deligation)이란 무엇인가?](https://github.com/kuman514/JavaScriptCores/blob/main/event%20delegation.html)   
 [this 키워드의 동작 과정은 어떻게 되는가?](https://github.com/kuman514/JavaScriptCores/blob/main/this.html)
 
 # 참고할 자료
