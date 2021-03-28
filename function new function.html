@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>let person = Person()과 let person = new Person()의 차이</title>
+  </head>
+  <body>
+    <script>
+      // 일반적인 함수 선언
+      function Person (name) {
+        this.name = name
+      }
+
+      // Person()은 함수로써 호출하는 것이다.
+      // 함수로써 호출하면 리턴값을 받게 되는데
+      // 이 Person 함수의 경우 아무것도 리턴하지 않으므로 undefined를 출력하게 되는 것이다.
+      let person1 = Person('kuman514')
+      console.log(person1)
+
+      // new Person()은 new 연산자를 사용하여 Person 객체의 새로운 인스턴스를 생성하는 것이다.
+      // 즉, Person 객체의 생성자로써 호출하는 것이다.
+      let person2 = new Person('kuman514')
+      console.log(person2)
+    </script>
+  </body>
+</html>
