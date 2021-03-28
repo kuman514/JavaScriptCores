@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html onclick="console.log('html clicked')">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이벤트 버블링</title>
+  </head>
+  <!-- 이벤트 버블링이란, DOM 이벤트가 상위 엘리먼트로 올라가는 현상이다. -->
+  <!-- 아래 코드에서, 버튼 클릭 시, 버튼이 클릭되었다는 이벤트부터 시작하여 -->
+  <!-- html 태그 클릭 이벤트까지 이벤트가 상위로 올라가는 것을 볼 수 있다. -->
+  
+  <!-- 이벤트는 가장 최상단인 document까지 올라가는데, -->
+  <!-- 이 과정에서 만난 엘리먼트마다, 그 엘리먼트의 이벤트 리스너가 존재하면 실행하는 것을 반복한다. -->
+
+  <!-- 이 현상을 활용한 기법에는 이벤트 위임(Event Deligation) 등등이 있다. -->
+  <body onclick="console.log('body clicked')">
+    <div id="content" onclick="console.log('#content clicked')">
+      <div id="status" onclick="console.log('#status clicked')">
+        <div id="buttons" onclick="console.log('#buttons clicked')">
+          <button id="1" onclick="console.log('#1 clicked')">1번 버튼</button>
+          <button id="2" onclick="console.log('#2 clicked')">2번 버튼</button>
+          <button id="3" onclick="console.log('#3 clicked')">3번 버튼</button>
+          <button id="4" onclick="console.log('#4 clicked')">4번 버튼</button>
+          <button id="5" onclick="console.log('#5 clicked')">5번 버튼</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
