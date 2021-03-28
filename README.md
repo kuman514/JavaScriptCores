@@ -21,6 +21,8 @@
 16. [AJAX(Asynchronus JavaScript And XML)가 무엇인지 설명할 수 있나?](https://github.com/kuman514/JavaScriptCores/blob/main/ajax.md)
 17. [AJAX의 장점과 단점은 무엇인가?](https://github.com/kuman514/JavaScriptCores/blob/main/ajax%20advantage%20drawback.md)
 18. [JSONP(JSON with Padding)는 어떻게 동작하는가?](https://github.com/kuman514/JavaScriptCores/blob/main/jsonp.md)
+19. [Templating 사용 사례는 무엇무엇이 있나?](https://github.com/kuman514/JavaScriptCores/blob/main/templating.html)
+20. [호이스팅(Hoisting)은 무엇인가?](https://github.com/kuman514/JavaScriptCores/blob/main/hoisting.html)
 
 # 참고할 자료
 한국어 문서   
