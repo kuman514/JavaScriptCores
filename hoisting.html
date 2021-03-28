@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>호이스팅</title>
+  </head>
+  <body>
+    <script>
+      // 호이스팅(Hoisting)이란, 동일 스코프 내 범위에서 변수와 함수를 그 윗줄에서도
+      // 참조할 수 있게 만드는 자바스크립트의 특성을 말하는 것이다.
+
+      // var 변수 호이스팅의 경우 선언 위치 위에서도 동일 스코프 내라면 가능하다.
+      // 하지만, 변수에 어떤 값을 할당하는지까진 알려지지 않으므로, 윗줄에서는 undefined로 되어 있다.
+      console.log(foo)        // undefined
+      var foo = 'FOON (^^)'
+      console.log(foo)        // FOON (^^)
+
+      // 몸체(body)가 있는 함수 선언문은 호이스팅되지만
+      // 함수 표현식(변수 선언 후 함수를 대입한 형태)은 호이스팅되지 않는다.
+
+      // 함수 선언 (호이스팅됨)
+      console.log(sayFoo1)   // [function sayFoo1]
+      sayFoo1()              // Hey! We are saying FOO!
+      function sayFoo1() {
+        console.log('Hey! We are saying FOO!')
+      }
+      sayFoo1()              // Hey! We are saying FOO!
+      console.log(sayFoo1)   // [function sayFoo1]
+
+      // 함수 표현식 (호이스팅되지 않음)
+      console.log(sayFoo2)   // undefined
+      //sayFoo2()            // TypeError: sayFoo2 is not a function
+      // 윗줄을 주석 처리하지 않으면 다음 코드가 진행되지 않는다.
+      var sayFoo2 = () => {
+        console.log('Oh! I am saying FOO, too!')
+      }
+      sayFoo2()              // Oh! I am saying FOO, too!
+      console.log(sayFoo2)   // () => {...}
+
+      // let, const로 선언된 변수도 호이스팅이 되긴 한다.
+      // 하지만, 해당 변수 선언의 동일 스코프 내 윗줄에서 접근 시 Reference Error가 발생한다.
+      // 해당 변수의 값이 할당되어 있지 않기 때문이다.
+      // 이러한 Reference Error가 발생하는 구간, 즉 코드 시작점부터 해당 변수 선언부까지의 구간을
+      // TDZ(Temporal Dead Zone)라고 한다.
+
+      console.log(v)   // undefined
+      console.log(l)   // Refernce Error
+      console.log(c)   // Refernce Error
+
+      var v = 10
+      let l = 20
+      const c = 30
+    </script>
+  </body>
+</html>
