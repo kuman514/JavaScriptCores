@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>call과 apply의 차이</title>
+  </head>
+  <body>
+    <script>
+      // call과 apply는 this 객체를 지정한 후 실행하는 공통점이 있으나,
+      // 전달되는 파라미터에 차이가 있다.
+
+      // 함수 선언문
+      function addAll (a, b, c, d) {
+        return a + b + c + d
+      }
+
+      // call은 함수 파라미터를 콤마로 구분하여 전달하지만
+      console.log(addAll.call(null, 1, 2, 3, 4))
+
+      // apply는 배열 하나를 파라미터로 전달한다.
+      console.log(addAll.apply(null, [1, 2, 3, 4]))
+    </script>
+  </body>
+</html>
