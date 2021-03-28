@@ -17,6 +17,7 @@
 12. [Function.prototype.call과 Function.prototype.apply의 차이점은 무엇인가?](https://github.com/kuman514/JavaScriptCores/blob/main/call%20vs%20apply.html)
 13. [Function.prototype.bind는 어떤 함수인가?](https://github.com/kuman514/JavaScriptCores/blob/main/bind.html)
 14. [document.write를 써도 좋을까?](https://github.com/kuman514/JavaScriptCores/blob/main/document%20write.html)
+15. [기능 탐지, 기능 추론, User Agent 문자열은 무엇인가?](https://github.com/kuman514/JavaScriptCores/blob/main/feature%20detection%2C%20feature%20inference%20and%20ua%20string.md)
 
 # 참고할 자료
 한국어 문서   
