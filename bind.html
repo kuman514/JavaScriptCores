@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function.prototype.bind</title>
+  </head>
+  <body>
+    <script>
+      // Function.prototype.bind(thisArg)는
+      // 해당 this가 thisArg를 가리키도록 지정된 객체(함수)를 반환한다.
+
+      // bind를 사용하는 예사
+      function debounce(fn, to) {
+        // setTimeout은 비동기적으로 실행되므로 호출 시 this를 유지하지 않는다.
+        // 따라서 함수를 넘기고자 할 때, bind를 적용시켜 넘기지 않으면
+        // 해당 함수의 this는 전역 객체를 가리키게 된다.
+        setTimeout(fn, to)
+      }
+
+      class Foo {
+        constructor () {
+          this.fullName = "Bar";
+        }
+
+        speak () {
+          console.log("My name is", this.fullName)
+        }
+
+        test () {
+          debounce(this.speak, 1000)
+          debounce(this.speak.bind(this), 2000)
+        }
+      }
+
+      let foo = new Foo()
+      foo.test()
+      // 첫 번째 줄에 My name is undefined가 출력되고
+      // 두 번째 줄에 My name is Bar가 출력된다.
+
+      // ES6의 화살표 함수 사용 시 this를 bind하지 않아도 된다.
+      class ES6Foo {
+        constructor () {
+          this.fullName = "Bar 2";
+        }
+
+        speak = () => {
+          console.log("My name is", this.fullName)
+        }
+
+        test () {
+          debounce(this.speak, 3000)
+        }
+      }
+
+      let foo2 = new ES6Foo()
+      foo2.test()
+      // 세 번째 줄에 My name is Bar 2가 출력된다.
+    </script>
+  </body>
+</html>
