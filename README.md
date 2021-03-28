@@ -14,6 +14,7 @@
 9. [익명 함수가 적용된 사례는 무엇무엇이 있나?](https://github.com/kuman514/JavaScriptCores/blob/main/anonymous%20function.html)   
 10. [호스트 객체와 네이티브 객체의 차이점은 무엇인가?](https://github.com/kuman514/JavaScriptCores/blob/main/host%20obj%20native%20obj.html)   
 11. [Function()과 new Function()의 차이는 무엇인가?](https://github.com/kuman514/JavaScriptCores/blob/main/function%20new%20function.html)
+12. [Function.prototype.call과 Function.prototype.apply의 차이점은 무엇인가?](https://github.com/kuman514/JavaScriptCores/blob/main/call%20vs%20apply.html)
 
 # 참고할 자료
 한국어 문서   
