@@ -16,6 +16,7 @@
 11. [Function()과 new Function()의 차이는 무엇인가?](https://github.com/kuman514/JavaScriptCores/blob/main/function%20new%20function.html)
 12. [Function.prototype.call과 Function.prototype.apply의 차이점은 무엇인가?](https://github.com/kuman514/JavaScriptCores/blob/main/call%20vs%20apply.html)
 13. [Function.prototype.bind는 어떤 함수인가?](https://github.com/kuman514/JavaScriptCores/blob/main/bind.html)
+14. [document.write를 써도 좋을까?](https://github.com/kuman514/JavaScriptCores/blob/main/document%20write.html)
 
 # 참고할 자료
 한국어 문서   
