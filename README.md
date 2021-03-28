@@ -11,7 +11,8 @@
 [null과 undefined와 선언되지 않은 변수 같의 차이점은 무엇인가?](https://github.com/kuman514/JavaScriptCores/blob/main/null%20undefined%20undeclared.html)   
 [클로저(closure)는 무엇이며, 왜 그리고 어떻게 쓰이는가?](https://github.com/kuman514/JavaScriptCores/blob/main/closure.html)   
 [forEach와 map의 차이는 무엇인가?](https://github.com/kuman514/JavaScriptCores/blob/main/foreach%20map.html)   
-[익명 함수가 적용된 사례는 무엇무엇이 있나?](https://github.com/kuman514/JavaScriptCores/blob/main/anonymous%20function.html)
+[익명 함수가 적용된 사례는 무엇무엇이 있나?](https://github.com/kuman514/JavaScriptCores/blob/main/anonymous%20function.html)   
+[Function()과 new Function()의 차이는 무엇인가?](https://github.com/kuman514/JavaScriptCores/blob/main/function%20new%20function.html)
 
 # 참고할 자료
 한국어 문서   
