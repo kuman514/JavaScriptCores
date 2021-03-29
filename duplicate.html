@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>duplicate([1, 2, 3, 4, 5])를 구현하는 방법</title>
+  </head>
+  <body id="body">
+    <script>
+      // duplicate()를 구현하라.
+      // duplicate([1, 2, 3, 4, 5])일때의 리턴값이 [1, 2, 3, 4, 5, 1, 2, 3, 4, 5]여야 한다.
+
+      // Array.prototype.concat을 이용한 방법
+      function duplicate_concat (arr) {
+        return arr.concat(arr)
+      }
+
+      // ES6 ...을 이용한 방법
+      function duplicate_es6_dotdotdot (arr) {
+        return [...arr, ...arr]
+      }
+
+      // 결과 확인
+      console.log(duplicate_concat([1, 2, 3, 4, 5]))
+      console.log(duplicate_es6_dotdotdot([1, 2, 3, 4, 5]))
+    </script>
+  </body>
+</html>
