@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>attribute와 property의 차이</title>
+  </head>
+  <body>
+    <div id="content">
+      <input id="input-test" type="text" value="koishi" />
+    </div>
+    <script>
+      // attribute도 DOM property 중 하나이다.
+      // attribute는 HTML에 정의되어 있지만, property는 DOM 객체에 정의되어 있다.
+      document.getElementById('input-test').addEventListener('change', (ev) => {
+        console.log(ev.target.value, ev.target.getAttribute('value'))
+        console.log(ev.target.id, ev.target.getAttribute('id'))
+      })
+      // 위 엘리먼트에서 id와 value를 바꿔보자.
+      // id는 property가 바뀌는 즉시 attribute에도 바로 반영이 되지만
+      // value는 property가 바뀌어도 attribute는 반영되지 않고 초기값을 유지한다.
+
+      // 참고사항
+      // attribute를 바로 반영하고 이름까지 같은 경우: rel,id 등
+      // attribute를 바로 반영하지만 이름이 조금 다른 경우: htmlFor(property) - for(attribute) , className(property) - class(attribute) 등
+      // attribute를 반영하지만 수정에는 영향이 없는 경우: src, href, disabled, multiple 등
+
+      // 상세 스펙
+      // https://html.spec.whatwg.org/multipage/common-dom-interfaces.html#reflect
+    </script>
+  </body>
+</html>
