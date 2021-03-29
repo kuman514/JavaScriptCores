@@ -23,8 +23,13 @@
 18. [JSONP(JSON with Padding)는 어떻게 동작하는가?](https://github.com/kuman514/JavaScriptCores/blob/main/jsonp.md)
 19. [Templating 사용 사례는 무엇무엇이 있나?](https://github.com/kuman514/JavaScriptCores/blob/main/templating.html)
 20. [호이스팅(Hoisting)은 무엇인가?](https://github.com/kuman514/JavaScriptCores/blob/main/hoisting.html)
+21. [이벤트 버블링(Event Bubbling)이란 무엇인가?](https://github.com/kuman514/JavaScriptCores/blob/main/event%20bubbling.html)
+22. [attribute와 property의 차이점은 무엇인가?](https://github.com/kuman514/JavaScriptCores/blob/main/attribute%20property.html)
+23. [JavaScript 내장 객체를 확장하는 것은 정말 바람직한가?](https://github.com/kuman514/JavaScriptCores/blob/main/builtin%20expansion.md)
+24. [document의 load 이벤트와 DOMContentLoaded의 차이점은?](https://github.com/kuman514/JavaScriptCores/blob/main/onload%20domcontentloaded.html)
+25. [== 연산자와 === 연산자의 차이는 무엇인가?](https://github.com/kuman514/JavaScriptCores/blob/main/%3D%3D%20vs%20%3D%3D%3D.html)
 
-# 참고할 자료
+# 참고할 자료 출처
 한국어 문서   
 [프론트엔드 면접 핸드북 1](https://blog.rhostem.com/posts/2020-04-12-fe-interview-handbook-js-1)   
 [프론트엔드 면접 핸드북 2](https://blog.rhostem.com/posts/2020-04-13-fe-interview-handbook-js-2)   
