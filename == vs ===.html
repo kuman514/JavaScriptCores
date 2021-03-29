@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>==와 ===의 차이</title>
+  </head>
+  <body>
+    <script>
+      // ==는 느슨한 등가(loose equality) 연산자이며, ===는 엄격한 등가(strict equality) 연산자이다.
+
+      // ==(느슨한 등가 연산자)는 필요하다면 타입 변환을 실시하여 비교한다.
+      console.log(undefined == null)   // true
+      console.log(1 == '1')            // true
+
+      // ===(엄격한 등가 연산자)는 반드시 있는 그대로의 값을 비교한다.
+      console.log(undefined === null)  // false
+      console.log(1 === '1')           // false
+
+      // JavaScript에선 ===(엄격한 등가 연산자) 사용이 매우 크게 권장된다.
+    </script>
+  </body>
+</html>
