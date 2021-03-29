@@ -28,6 +28,8 @@
 23. [JavaScript 내장 객체를 확장하는 것은 정말 바람직한가?](https://github.com/kuman514/JavaScriptCores/blob/main/builtin%20expansion.md)
 24. [document의 load 이벤트와 DOMContentLoaded의 차이점은?](https://github.com/kuman514/JavaScriptCores/blob/main/onload%20domcontentloaded.html)
 25. [== 연산자와 === 연산자의 차이는 무엇인가?](https://github.com/kuman514/JavaScriptCores/blob/main/%3D%3D%20vs%20%3D%3D%3D.html)
+26. [JavaScript의 동일 출처 정책(Same-origin Policy)은 무엇인가?](https://github.com/kuman514/JavaScriptCores/blob/main/same%20origin%20policy.md)
+27. [duplicate(Array)를 구현하는 방법은?](https://github.com/kuman514/JavaScriptCores/blob/main/duplicate.html)
 
 # 참고할 자료 출처
 한국어 문서   
