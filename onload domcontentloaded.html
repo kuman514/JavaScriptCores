@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>onload와 DOMContentLoaded의 차이</title>
+  </head>
+  <body>
+    <div id="content">
+      <img src="https://en.touhouwiki.net/images/thumb/4/40/Th155Koishi.png/312px-Th155Koishi.png">
+      <img src="https://static.wikia.nocookie.net/apex-legends-universe/images/4/49/177-1779226_bloodhound-apex-legends.png/revision/latest?cb=20200207155332">
+      <img src="https://pbs.twimg.com/media/Exedr5NUcAAfMoP?format=jpg&name=small">
+      <img src="https://pbs.twimg.com/media/ExkzZyeVgAURieF?format=jpg&name=large">
+      <img src="https://pbs.twimg.com/media/ExNfDC2VIAEuP-p?format=jpg&name=small">
+      <img src="https://pbs.twimg.com/media/ExNfDDLVgAUWp0E?format=jpg&name=small">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/Alberto_Del_Rio_RAW_2012.jpg/1024px-Alberto_Del_Rio_RAW_2012.jpg">
+      <img src="https://site-cdn.givemesport.com/images/21/02/11/8f6fe1c22dbab2f66a86f19d09ce5370/1201.jpg">
+      <img src="https://i.ytimg.com/vi/GPH2bDTnUCc/maxresdefault.jpg">
+    </div>
+    <script>
+      // window의 load 이벤트 (window.onload 이벤트)는 모든 리소스가 로딩되고 나서 발생한다.
+      // (DOM과 페이지가 포함된 모든 리소스 로딩 완료 시 onload 이벤트 발생.)
+      window.onload = () => {
+        console.log('All Resources Completely Loaded')
+      }
+
+      // DOMContentLoaded 이벤트는 페이지가 로딩되어 Parsing될 때 발생한다.
+      // (스타일시트, 이미지, 서브프레임 등의 완전한 로딩은 기다리지 않는다.)
+      window.addEventListener('DOMContentLoaded', () => {
+        console.log('DOM Content Loaded and Parsed')
+      })
+    </script>
+  </body>
+</html>
