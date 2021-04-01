@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>"use strict"의 의미와 장단점</title>
+  </head>
+  <body>
+    <script>
+      // 'use strict'는 엄격 모드(Stirct Mode)를 적용한다는 뜻이며
+      // 오류 방지 목적으로 일부 기능을 제한함.
+
+      // 전체 스크립트 엄격 모드 적용
+      //'use strict'
+      // 그러나 크롬에서는 전체 스크립트 엄격 모드가 적용되지 않는것 같다.
+
+      // 함수 엄격 모드 적용
+      function yasuo () {
+        'use strict'
+        window.x = null
+        console.log(window)
+      }
+
+      // 모듈은 기본적으로 엄격 모드가 적용되어 있다고 한다.
+
+      // 장점
+      // 의도되지 않은 전역 변수가 선언되지 못하도록 한다.
+      // (아래는 정말로 오류가 발생해서 주석처리)
+      /*
+      (function () {
+        'use strict'
+        c = 0
+        console.log(c)
+      })();
+      */
+      
+      // 삭제할 수 없는 속성을 삭제하려고 하면 오류가 발생한다.
+      
+      // 함수의 파라미터 이름을 서로 다르게 해야만 한다.
+      (function (koishi, koishi) {})();
+      // (아래는 정말로 오류가 발생해서 주석처리)
+      /*
+      (function (koishi, koishi) {
+        'use strict'
+      })()
+      */
+      
+      // this는 전역 컨텍스트에서 undefined이다.
+      (function () {
+        'use strict'
+        console.log(this)
+      })();
+
+      // 몇 가지 일반적인 코딩 실수를 잡아서 예외처리 시킨다.
+      // (예: 전역 객체에 접근하려고 하는 것)
+
+      // 자바스크립트에서 개발자에게 혼란을 주거나, 잘못 만든 것으로 보이는 여러 기능의 사용을 금지시킨다.
+      // =========================================================
+
+      // 단점
+      // 못 쓰게 되는 기능이 필요할 수도 있다.
+      // function.caller와 function.arguments에 접근할 수 없다.
+      // 서로 다른 Stirct Mode로 작성된 코드를 연결했을 때 오류가 발생할 수 있다.
+      // =========================================================
+
+      // Strict 모드는 단점보다 장점이 많으므로 사용이 권장된다.
+    </script>
+  </body>
+</html>
