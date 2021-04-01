@@ -30,6 +30,8 @@
 25. [== 연산자와 === 연산자의 차이는 무엇인가?](https://github.com/kuman514/JavaScriptCores/blob/main/%3D%3D%20vs%20%3D%3D%3D.html)
 26. [JavaScript의 동일 출처 정책(Same-origin Policy)은 무엇인가?](https://github.com/kuman514/JavaScriptCores/blob/main/same%20origin%20policy.md)
 27. [duplicate(Array)를 구현하는 방법은?](https://github.com/kuman514/JavaScriptCores/blob/main/duplicate.html)
+28. [Ternary는 무슨 연산자를 말하는가?](https://github.com/kuman514/JavaScriptCores/blob/main/ternary.html)
+29. ["use strict"의 의미와 장단점은 무엇인가?](https://github.com/kuman514/JavaScriptCores/blob/main/use%20strict.html)
 
 # 참고할 자료 출처
 한국어 문서   
