@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>웹사이트의 전역 scope를 건드리지 않고 그대로 두는 것이 좋은 이유는?</title>
+  </head>
+  <body>
+    <script>
+      // 웹사이트의 전역 scope를 그대로 두는 것은
+      // 변수와 함수 이름의 충돌을 방지하기 위함이다.
+
+      let globalInt = 0
+
+      window.onload = () => {
+        if (globalInt === 0) {
+          console.log('koishi')
+        }
+        globalInt++
+        console.log('onload', globalInt)
+      }
+
+      window.addEventListener('DOMContentLoaded', () => {
+        globalInt = () => {
+          return 'global Int'
+        }
+        console.log('DOMContentLoaded', globalInt())
+      })
+    </script>
+  </body>
+</html>
