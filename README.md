@@ -32,6 +32,7 @@
 27. [duplicate(Array)를 구현하는 방법은?](https://github.com/kuman514/JavaScriptCores/blob/main/duplicate.html)
 28. [Ternary는 무슨 연산자를 말하는가?](https://github.com/kuman514/JavaScriptCores/blob/main/ternary.html)
 29. ["use strict"의 의미와 장단점은 무엇인가?](https://github.com/kuman514/JavaScriptCores/blob/main/use%20strict.html)
+30. [웹사이트의 전역 스코프를 그대로 두는 것이 좋은 이유는?](https://github.com/kuman514/JavaScriptCores/blob/main/global%20scope.html)
 
 # 참고할 자료 출처
 한국어 문서   
