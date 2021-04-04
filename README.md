@@ -36,6 +36,9 @@
 31. [SPA(Single Page Application) 앱이 무엇인가? 그리고 SEO(Search Engine Optimization)는 어떻게 해야 하는가?](https://github.com/kuman514/JavaScriptCores/blob/main/spa%20seo.md)
 32. [Promise와 Polyfill은 무엇인가?](https://github.com/kuman514/JavaScriptCores/blob/main/promise%20polyfill.md)
 33. [callback대신 Promise를 사용하는 것의 장점과 단점은?](https://github.com/kuman514/JavaScriptCores/blob/main/promise%20advantage.md)
+34. [자바스크립트로 컴파일되는 언어를 사용하는 것의 장/단점은 무엇인가?](https://github.com/kuman514/JavaScriptCores/blob/main/compiled%20languages.md)
+35. [자바스크립트 개발에 어떤 디버깅 툴을 사용하는가?](https://github.com/kuman514/JavaScriptCores/blob/main/debugging%20tools.md)
+36. [객체의 속성이나 배열의 항목을 순회(iteration)하는 방법은 무엇무엇이 있나?](https://github.com/kuman514/JavaScriptCores/blob/main/iteration.html)
 
 # 참고할 자료 출처
 한국어 문서   
