@@ -33,6 +33,9 @@
 28. [Ternary는 무슨 연산자를 말하는가?](https://github.com/kuman514/JavaScriptCores/blob/main/ternary.html)
 29. ["use strict"의 의미와 장단점은 무엇인가?](https://github.com/kuman514/JavaScriptCores/blob/main/use%20strict.html)
 30. [웹사이트의 전역 스코프를 그대로 두는 것이 좋은 이유는?](https://github.com/kuman514/JavaScriptCores/blob/main/global%20scope.html)
+31. [SPA(Single Page Application) 앱이 무엇인가? 그리고 SEO(Search Engine Optimization)는 어떻게 해야 하는가?](https://github.com/kuman514/JavaScriptCores/blob/main/spa%20seo.md)
+32. [Promise와 Polyfill은 무엇인가?](https://github.com/kuman514/JavaScriptCores/blob/main/promise%20polyfill.md)
+33. [callback대신 Promise를 사용하는 것의 장점과 단점은?](https://github.com/kuman514/JavaScriptCores/blob/main/promise%20advantage.md)
 
 # 참고할 자료 출처
 한국어 문서   
