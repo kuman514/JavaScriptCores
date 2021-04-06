@@ -39,8 +39,11 @@
 34. [자바스크립트로 컴파일되는 언어를 사용하는 것의 장/단점은 무엇인가?](https://github.com/kuman514/JavaScriptCores/blob/main/compiled%20languages.md)
 35. [자바스크립트 개발에 어떤 디버깅 툴을 사용하는가?](https://github.com/kuman514/JavaScriptCores/blob/main/debugging%20tools.md)
 36. [객체의 속성이나 배열의 항목을 순회(iteration)하는 방법은 무엇무엇이 있나?](https://github.com/kuman514/JavaScriptCores/blob/main/iteration.html)
+37. [가변(mutable)과 불변(immutable)의 차이는 무엇인가?](https://github.com/kuman514/JavaScriptCores/blob/main/mutable%20immutable.html)
+38. [불변성(immutable) 구현 방법은 무엇이 있나?](https://github.com/kuman514/JavaScriptCores/blob/main/immutability%20implementaion.html)
+39. [동기(sync)와 비동기(async)의 차이는 무엇인가?](https://github.com/kuman514/JavaScriptCores/blob/main/sync%20async.md)
 
-# 참고할 자료 출처
+# 참고자료 출처
 한국어 문서   
 [프론트엔드 면접 핸드북 1](https://blog.rhostem.com/posts/2020-04-12-fe-interview-handbook-js-1)   
 [프론트엔드 면접 핸드북 2](https://blog.rhostem.com/posts/2020-04-13-fe-interview-handbook-js-2)   
