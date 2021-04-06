@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>가변(mutable)와 불변(immutable)의 차이</title>
+  </head>
+  <body>
+    <script>
+      // 가변과 불변의 차이는 이미 선언된 객체의 값을 수정할 수 있느냐 없느냐로 나뉜다.
+
+      // 커스텀 객체는 일반적으로 가변적이다. 그렇다면 불변을 만드려면 어떻게 해야 하나?
+
+      // 자바스크립트의 원시(Primitive) 타입은 변경 불가능한 값이다.
+      // 대표적인 자바스크립트 불변 객체: Math, Date 등 일부 자바스크립트 내장 객체
+
+      // 객체 속성을 상수로 만들기
+      // 다음과 같이 writable: false 와 configurable: false를 조합해서 객체 속성을
+      // 상수(변경, 삭제, 재할당이 불가능함)로 만들 수 있다.
+      let koishiObj = {}
+      Object.defineProperty(koishiObj, 'name', {
+        value: 'Koishi Komeiji',
+        writable: false,
+        configurable: false
+      })
+      koishiObj.name = 'kuman514'
+      console.log(koishiObj)
+      // 실행 결과: {name: 'Koishi Komeiji'} (즉, 이름이 변하지 않았다.)
+
+      // 객체 확장 방지
+      // 다음과 같이 객체의 새로운 속성 추가를 방지할 수 있다.
+      let koishiObj2 = {
+        color: 'green'
+      }
+      Object.preventExtensions(koishiObj2)
+      koishiObj2.sister = 'satori'
+      console.log(koishiObj2.sister)
+      // 실행 결과: undefined
+
+      // Object.seal()
+      // 봉인된 객체를 만든다. 속성 추가/제거가 불가능하다.
+      let koishiObj3 = {
+        number: 514
+      }
+      let koishiObj3_copy = Object.seal(koishiObj3)
+      console.log(koishiObj3)
+      console.log(koishiObj3_copy)
+
+      koishiObj3.number = 0
+      koishiObj3_copy.number = 0
+      koishiObj3.sister = 'satori'
+      koishiObj3_copy.sister = 'satori'
+
+      console.log(koishiObj3)
+      console.log(koishiObj3_copy)
+
+      // Object.freeze()
+      // 원본 객체까지 동결시켜 반환한다. 속성 추가/제거 및 속성값 변경이 불가능하며, 그 프로토타입이 변형되는 것도 방지한다.
+      let koishiObj4 = {
+        number: 514
+      }
+      let koishiObj4_copy = Object.freeze(koishiObj4)
+      console.log(koishiObj4)
+      console.log(koishiObj4_copy)
+
+      koishiObj4.number = 0
+      koishiObj4_copy.number = 0
+      koishiObj4.sister = 'satori'
+      koishiObj4_copy.sister = 'satori'
+
+      console.log(koishiObj4)
+      console.log(koishiObj4_copy)
+
+      // 주의사항
+      // 위의 방법들은 모두 얕은 것이다. 깊은 상수화를 하려면 멤버들을 일일히 상수화시킬 것.
+    </script>
+  </body>
+</html>
