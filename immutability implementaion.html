@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>불변성(immutability) 구현 방법</title>
+  </head>
+  <body>
+    <script>
+      // Immutable.js나 mori, immer같은 라이브러리 사용도 좋은 방법.
+
+      // const 변수 선언 + (... 또는 Object.assign() 또는 Array.prototype.concat())
+      // 등의 조합으로, 원본 객체를 수정하는 대신 새 객체를 만들 수도 있다.
+
+      // const 변수 선언
+      const arr = [1, 2, 3, 4, 5]
+      const youkai = Object.freeze({
+        race: 'youkai'
+      })
+
+      // ... (Spread Operator)
+      const newArr = [...arr, 6, 7, 8, 9, 10]
+      console.log(arr, newArr)
+      const koishi = {
+        ...youkai,
+        name: 'Koishi Komeiji'
+      }
+      console.log(youkai, koishi)
+
+      // Object.assign()
+      // 이거 원본 객체 수정되는거 같은데...
+      const koishie = Object.assign(koishi, {
+        quotes: 'tan tan pou'
+      })
+      console.log(youkai, koishi, koishie)
+
+      // Array.prototype.concat()
+      const newArr2 = arr.concat([6, 7, 8, 9, 10, 11])
+      console.log(arr, newArr2)
+      // 원본 객체 유지
+    </script>
+  </body>
+</html>
