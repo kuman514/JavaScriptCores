@@ -42,6 +42,7 @@
 37. [가변(mutable)과 불변(immutable)의 차이는 무엇인가?](https://github.com/kuman514/JavaScriptCores/blob/main/mutable%20immutable.html)
 38. [불변성(immutable) 구현 방법은 무엇이 있나?](https://github.com/kuman514/JavaScriptCores/blob/main/immutability%20implementaion.html)
 39. [동기(sync)와 비동기(async)의 차이는 무엇인가?](https://github.com/kuman514/JavaScriptCores/blob/main/sync%20async.md)
+40. [이벤트 루프, 콜 스택, 태스크 큐는 무엇인가?](https://github.com/kuman514/JavaScriptCores/blob/main/event%20loop.md)
 
 # 참고자료 출처
 한국어 문서   
