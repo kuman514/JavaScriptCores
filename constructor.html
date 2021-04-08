@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ES6 클래스와 ES5 생성자 함수의 차이</title>
+  </head>
+  <body>
+    <script>
+      // ES5 생성자 함수
+      function ES5Koishi (name) {
+        this.name = name
+      }
+
+      // ES6 클래스
+      class ES6Koishi {
+        constructor (name) {
+          this.name = name
+        }
+      }
+
+      // ES6 클래스와 ES5 생성자 함수는 상속을 구현하는데 있어 매우 큰 차이가 있다.
+      // ES5 생성자 함수는 상속을 받으려면 상속받고자 하는 객체의 프로토타입을 복사하는 등등의 여러 작업이 필요하지만,
+      // ES6 클래스는 'extends 상속받을 함수'로 명시 후, constructor 메소드 내에 super(this)만 추가하면 된다.
+
+      // ES5 생성자 함수의 상속
+      function ES5BerigooKoishie (name, type) {
+        // 슈퍼클래스(부모 클래스)의 생성자를 호출하여 상속받을 멤버들을 초기화한다.
+        ES5Koishi.call(this, name)
+        
+        // 이 클래스만의 멤버를 초기화한다.
+        this.type = type
+      }
+
+      // ES6 클래스의 상속
+      class ES6BerigooKoishie extends ES6Koishi {
+        constructor (name, type) {
+          super(name)
+          this.type = type
+        }
+      }
+    </script>
+  </body>
+</html>
