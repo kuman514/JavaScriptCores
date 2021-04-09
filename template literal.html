@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>템플릿 리터럴</title>
+  </head>
+  <body>
+    <script>
+      // 템플릿 리터럴은 ES6에 추가된, 문자열 사용에 큰 유연성을 제공하는 기능이다.
+      // 문자열 삽입과 문자열 안에 변수 넣기 등등을 더욱 간단하게 할 수 있다.
+
+      var koishi = {
+        name: 'koishi',
+        type: 'baby',
+        sign: 514
+      };
+
+      // ES6 이전의 문자열은...
+      // ES6 이전에는 문자열에 변수를 넣으려면 번거롭게 + 연산자를 덕지덕지 붙여야 했다.
+      console.log('hello ' + koishi.name + '! you are an adorable ' + koishi.type + ', and your number is ' + koishi.sign + '.');
+      // ES6 이전의 문자열에서 문자열 띄어쓰기를 하려면 반드시 \n(개행 문자)를 넣어야 했다.
+      console.log('koishi is...\n' + 'an adorable baby!');
+
+      // ES6 템플릿 리터럴이 생긴 이후...
+      // 번거롭고 복잡하게 +를 붙이지 않아도 다음과 같은 형태로 문자열에 변수를 넣을 수 있다.
+      console.log(`hello ${koishi.name}! you are an adorable ${koishi.type}, and your number is ${koishi.sign}.`);
+      // ES6 템플릿 리터럴은 개행 표현 시 개행 문자를 넣지 않아도 된다.
+      console.log(`koishi is...
+                   an adorable baby!`);
+      // ES6 템플릿 리터럴을 활용하여 React같은 템플릿 라이브러리를 대체할 수 있으나,
+      // 이의 경우 XSS 공격을 방어하기 위해 문자열을 sanitize해야 한다.
+    </script>
+  </body>
+</html>
