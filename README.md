@@ -44,6 +44,9 @@
 39. [동기(sync)와 비동기(async)의 차이는 무엇인가?](https://github.com/kuman514/JavaScriptCores/blob/main/sync%20async.md)
 40. [이벤트 루프, 콜 스택, 태스크 큐는 무엇인가?](https://github.com/kuman514/JavaScriptCores/blob/main/event%20loop.md)
 41. [ES6 클래스와 ES5 생성자 함수의 차이는 무엇인가?](https://github.com/kuman514/JavaScriptCores/blob/main/constructor.html)
+42. [생성자 함수에서 메소드 선언에 화살표 함수를 선언하는 것의 장점은 무엇인가?](https://github.com/kuman514/JavaScriptCores/blob/main/arrow%20advangtae.html)
+43. [고차 함수(higher-order function)란 무엇인가?](https://github.com/kuman514/JavaScriptCores/blob/main/higher%20order%20function.html)
+44. [구조 분해 할당(destructuring)이 무엇인가?](https://github.com/kuman514/JavaScriptCores/blob/main/destructuring.html)
 
 # 참고자료 출처
 한국어 문서   
