@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>구조 분해 할당(destructuring)이 무엇인가?</title>
+  </head>
+  <body>
+    <script>
+      // 구조 분해 할당은 ES6에 도입된 문법으로, 객체나 배열의 값을 추출해서 변수에 바로 할당할 수 있는 방법이다.
+      // 파이썬의 a, b = c, d와 매우 유사하독 보면 된다.
+
+      // 배열 구조 분해 할당 예시 1
+      // 배열 내부 순서대로 각 변수에 할당한다.
+      const nums = [1, 2, 3];
+      const [one, two, three] = nums;
+      console.log(one, two, three);
+
+      // 배열 구조 분해 할당 예시 2
+      // 이는 변수 교환에도 활용된다.
+      let a = 12;
+      let b = 29;
+      [a, b] = [b, a];
+      console.log(a, b);
+
+      // 객체 구조 분해 할당 예시
+      // 객체 선언
+      const obj = {
+        p: 514,
+        q: 'koishi'
+      };
+      // 반드시, 객체 멤버의 이름을 그대로 따라야 한다.
+      const {p, q} = obj;
+      console.log(p, q)
+      // 새로운 변수명을 제공하여 사용할 수도 있다.
+      const {
+        p: pValue,
+        q: qValue
+      } = obj;
+      console.log(pValue, qValue)
+    </script>
+  </body>
+</html>
