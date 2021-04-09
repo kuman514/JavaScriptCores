@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>고차 함수(higher-order function)란?</title>
+  </head>
+  <body>
+    <script>
+      // 고차 함수란, 파리미터로 함수를 받거나, 함수를 리턴하는 함수를 말하는 것이다.
+
+      // 고차 함수의 가장 대표적인 예시: Array.prototype.map()
+      // map은 파라미터로 함수를 받는 가장 대표적인 예시이다.
+      let ints = [1, 2, 3, 4, 5, 6, 7, 8]
+      let sqints = ints.map((item) => {
+        return item * item
+      })
+      console.log(ints, sqints)
+
+      // 그 외에도, Array.prototype.forEach, Array.prototype.reduce, Array.prototype.filter 등등이 있다.
+    </script>
+  </body>
+</html>
