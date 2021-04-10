@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>...(spread) 연산자와 ...rest(rest) 연산자의 차이점은 무엇인가?</title>
+  </head>
+  <body>
+    <script>
+      // ... 연산자, 즉 spread 연산자는 객체나 배열에 있는 데이터를 푸는 연산자이며,
+      // ...rest 연산자, 즉 rest 연산자는 전달받은 나머지 데이터를 배열이나 객체 안에 집어넣는 연산자이다.
+
+      // spread 연산자 예시
+      function testSpreadBaby (arr) {
+        return [...arr, 'baby'];
+      }
+      const result = testSpreadBaby(['I', 'think', 'Koishi', 'is', 'an', 'adorable']);
+      console.log(result);
+
+      // spread 연산자 예시 2
+      function testSpreadBerigoo (obj) {
+        return {
+          ...obj,
+          type: 'berigoo'
+        };
+      }
+      const result2 = testSpreadBerigoo({
+        name: 'koishie',
+        be: 'is',
+      });
+      console.log(result2);
+
+      // rest 연산자 예시 1
+      function mapElements (mapFunc, ...elements) {
+        return elements.map(mapFunc);
+      }
+      function add5 (x) {
+        return x + 5;
+      }
+      const result3 = mapElements(add5, 1, 2, 3, 4, 5, 6, 7, 9);
+      console.log(result3);
+
+      // rest 연산자 예시 2
+      const [e1, e2, e3, ...rest] = [14, 3, 6, 27, 9, 4];
+      console.log(e1);    // 14
+      console.log(e2);    // 3
+      console.log(e3);    // 6
+      console.log(rest);  // 이 때, rest는 배열 형태로 저장된다. -> [27, 9, 4]
+
+      // rest 연산자 예시 3
+      const {e, f, ...others} = {
+        e: 'koishi is an adorable baby',
+        f: 514,
+        g: true,
+        a: null,
+        v: 'real'
+      };
+      console.log(e);       // koishi is an adorable baby
+      console.log(f);       // 514
+      console.log(others);  // 이 때, others는 객체 형태로 저장된다. -> {g: true, a: null, v: 'real'}
+    </script>
+  </body>
+</html>
