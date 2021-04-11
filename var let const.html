@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>var와 let과 const 간의 차이점</title>
+  </head>
+  <body>
+    <script>
+      // 변수의 범위
+      // var는 함수 레벨 스코프(함수 범위 내에 선언되었다면) 또는 전역 스코프에 속한다.
+      // let과 const는 블록 레벨 스코프에 속하며, 블록(가장 가까운 중괄호({})로 둘러싼 범위)을 벗어나면 참조할 수 없다.
+
+      // 함수 스코프 테스트
+      function testScope () {
+        var varScope = 'var'
+        let letScope = 'let'
+        const constScope = 'const'
+
+        // 블록 스코프 테스트
+        if (true) {
+          var innerVarScope = 'var'
+          let innerLetScope = 'let'
+          const innerConstScope = 'const'
+
+          console.log('inner', innerVarScope, innerLetScope, innerConstScope)
+        }
+
+        console.log(varScope)
+        console.log(letScope, constScope)
+        console.log('inner', innerVarScope)
+        //console.log('inner', innerLetScope, innerConstScope)
+      }
+      testScope()
+      //console.log(varScope, letScope, constScope)
+
+      // 호이스팅 (변수를 선언부 위에서도 참조할 수 있는 자바스크립트의 특징)
+      // var는 호이스팅이 되지만 undefined값을 가진다.
+      // let과 const는 선언부 위에서 참조할 시 에러를 발생시킨다.
+      console.log(varHoisting)
+      //console.log(letHoisting)             // 에러 발생
+      //console.log(constHoisting)           // 에러 발생
+      var varHoisting = 'var hoisting'
+      let letHoisting = 'let hoisting'
+      const constHoisting = 'const hoisting'
+
+      // 재선언
+      // var는 가능한 반면, let과 const는 할 수 없다.
+      var varRedef = 'redef var'
+      var varRedef = 'redef var 2'
+      let letRedef = 'redef let'
+      //let letRedef = 'redef let 2'         // 에러 발생
+      const constRedef = 'redef const'
+      //const constRedef = 'redef const 2'   // 에러 발생
+
+      // 값 변경(재할당)
+      // var와 let은 가능한 반면, const는 할 수 없다.
+      var varReload = 'var'
+      let letReload = 'let'
+      const constReload = 'const'
+      varReload = 'var 2'
+      letReload = 'let 2'
+      //constReload = 'const 2'              // 에러 발생
+
+      // 요약
+      // 범위: [var: 함수 레벨 스코프 또는 전역 스코프], [let, const: 블록 레벨 스코프]
+      // 호이스팅: [var: 선언부 위에서 참조 가능하나 undefined 값을 가짐], [let, const: 선언부 위에서 참조 시 오류 발생]
+      // 재선언: [var: 가능], [let, const: 불가능]
+      // 값 변경(재할당): [var, let: 가능], [const: 불가능]
+    </script>
+  </body>
+</html>
