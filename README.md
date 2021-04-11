@@ -51,6 +51,9 @@
 46. [템플릿 리터럴이 무엇인가?](https://github.com/kuman514/JavaScriptCores/blob/main/template%20literal.html)
 47. [curry 함수란 무엇이며, 그 장점은 무엇인가?](https://github.com/kuman514/JavaScriptCores/blob/main/curry.html)
 48. [spread 문법과 장점과 rest 문법과의 차이점은 무엇인가?](https://github.com/kuman514/JavaScriptCores/blob/main/spread%20rest.html)
+49. [JavaScript 파일 사이에서 코드를 공유하는 방법은?](https://github.com/kuman514/JavaScriptCores/blob/main/code%20share.md)
+50. [static 클래스 멤버를 사용하는 이유는 무엇인가?](https://github.com/kuman514/JavaScriptCores/blob/main/static%20class%20member.md)
+51. [var와 let과 const 간의 차이점은 무엇인가?](https://github.com/kuman514/JavaScriptCores/blob/main/var%20let%20const.html)
 
 # 참고자료 출처
 한국어 문서   
