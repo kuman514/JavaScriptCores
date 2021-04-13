@@ -49,9 +49,9 @@
 `기능 추론`: 어떤 기능이 있으면 그 기능과 관련된 다른 기능까지 있을 것으로 추정하여, 해당 타 기능을 사용하는 방법. (권장되지 않는다.)   
 `User Agent 문자열`: 브라우저가 제공하는 문자열. 애플리케이션 타입, 운영체제, 소프트웨어 벤더, 소프트웨어 버전 등등을 확인할 수 있다.
 
-> `AJAX(Asynchronus JavaScript And XML)`는 비동기적인 통신을 통해 표시 중인 화면을 새로고침하지 않고 동적으로 컨텐츠를 바꾸는 웹 기술이다.
+> `AJAX(Asynchronus JavaScript And XML)`는 비동기적인 통신을 통해 표시 중인 화면을 새로고침하지 않고 동적으로 컨텐츠를 바꾸는 웹 기술이다. 최근에는 `XML`보다 `JSON`을 통해 데이터를 가져온다.
 
-> `AJAX`의 장점: 새로고침 없는 동적인 컨텐츠, 한 번만 가져와도 되는 스크립트/스타일시트, 초기화되지 않는 페이지 상태 등등   
+> `AJAX`의 장점: 새로고침 없는 동적인 컨텐츠, 한 번만 가져와도 되는 스크립트/스타일시트, 초기화되지 않는 페이지 상태, 서버와 클라이언트 사이의 명확한 역할 구분 등등   
 `AJAX`의 단점: 어려워진 북마크, JavaScript 불허 페이지에서는 미작동, JavaScript를 사용하지 않는 웹 크롤러와의 낮은 호환성, 접속이 느리거나 스펙이 낮은 기기에서의 동작이 어려움 등등
 
 > `JSONP(JSON with Padding)`는 다른 도메인에 있는 서버에서 클라이언트의 전역 함수를 호출함으로써 동작한다. 하지만, `JSONP`는 해킹으로 간주되니, `CORS(Cross-Origin Resource Sharing)`를 이용한 구현이 더 권장된다.
@@ -91,4 +91,17 @@
 
 > 변수와 함수 이름의 충돌을 방지하려면, 웹사이트의 전역 스코프를 건드리지 않는 것이 좋다.
 
-> 
+> `SPA(Single Page Application)`이란, 클라이언트 사이드에서 렌더링하는 웹사이트(웹앱)를 말한다. 장단점은 `AJAX`와 거의 유사하다.
+
+> `Promise`: 지금 당장이 아닌 나중에, 비동기적으로 값을 리턴할 수 있는 객체. `Resolved`된 값이나 `Reject`된 이유를 알 수 있고, `fulfilled`/`rejected`/`pending`으로 3가지 상태가 있으며, `fulfilled`/`rejected`됐을 때의 콜백을 전달할 수 있다.   
+`Polyfill`: 브라우저에서 지원하지 않는 기능을 제공하기 위해 개발자가 구현한 코드 조각이나 플러그인. ES6에선 더이상 필요하지 않다.
+
+> `callback` 대신 `Promise`를 사용할 때의 장단점   
+장점: 가독성 향상, `.then()`을 통한 순차적 비동기 작업, `Promise.all()`을 통한 쉬운 병렬 처리, `callback`의 잘못된 실행이나 숨은 에러/예외 방지.   
+단점: `Promise`를 지원하지 않는 브라우저에 대한 `polyfill` 작성 필요, 조금 더 복잡해지는 코드.
+
+> JavaScript로 컴파일되는 언어: `TypeScript`, `CoffeeScript`, `Elm`, `PureScript`.   
+이들의 장점: JavaScript가 가진 오랜 문제점과 잘못된 사용(안티 패턴/전역 스코프 사용/부적절한 truthy/falsy 값 확인 등등)을 방지, 간결한 코드와 편리한 문법 사용, (`TypeScript` 한정) 정적 타입 지원.   
+이들의 단점: 항상 표준보다 뒤쳐져있음, 라이브러리/튜토리얼/리소스/툴의 양이 관련 커뮤니티의 규모에 의존, IDE/editor 지원이 빈약할 수 있음 등등.
+
+> JavaScript 디버깅 툴: `Google Chrome 개발자 도구`, `React Dev Tool`, JavaScript 코드에 `debugger`문 삽입, `console.log()`, `Redux DevTools` 등등
