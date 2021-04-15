@@ -105,3 +105,24 @@
 이들의 단점: 항상 표준보다 뒤쳐져있음, 라이브러리/튜토리얼/리소스/툴의 양이 관련 커뮤니티의 규모에 의존, IDE/editor 지원이 빈약할 수 있음 등등.
 
 > JavaScript 디버깅 툴: `Google Chrome 개발자 도구`, `React Dev Tool`, JavaScript 코드에 `debugger`문 삽입, `console.log()`, `Redux DevTools` 등등
+
+> 객체의 속성이나 배열의 항목을 순회(iteration)하는 방법   
+객체 속성 순회: `for ... in ...`, `Object.keys(obj).forEach(callback)`, `Object.getOwnPropertyNames(obj).forEach(callback)`.   
+배열 항목 순회: `for ... in ...`, `for ... of ...`, `Array.prototype.forEach(callback)`, `for [index, el] of array.entries`.
+
+> `가변(mutable)`과 `불변(immutable)`의 차이는 이미 선언된 값의 내용을 변경할 수 있느냐에 따라 나뉜다.   
+가변: 원시값(Primitive Value)이 아닌 것, 즉 `객체(Object)`가 일반적으로 가변적이다.   
+불변: 대표적으로 `원시값(Primitive Value)`, 즉 `number`, `string`, `boolean`, `symbol`, `null`, `undefined` 등등이 이에 속한다. `Object.freeze()`를 통해 객체를 불변으로 만들 수 있으나, 이는 `얕은 동결(Shallow Freeze)`이므로 객체 안 객체의 내용이 변경될 수 있다. `Immutable.js`를 사용하는 것도 좋다.
+
+> 불변성(immutability) 구현 방법   
+`const` 변수: 재할당을 방지할 수 있으나, 객체의 내용이 변할 수 있다.   
+`Object.freeze()`: 객체의 내용이 변경되는 것을 방지할 수 있으나, 객체 안의 객체의 내용이 변경될 수 있다. 즉, `얕은 동결`.   
+그 외: `Immutable.js` 사용 등등.
+
+> `동기(sync)`와 `비동기(async)`의 차이점   
+동기: 한 번에 한 가지를 처리함. 코드의 확실한 순차적 실행이 보장되나, 실행 시간이 긴 코드에 매우 비효율적.   
+비동기: 한 번에 여러 가지를 병렬적으로 처리함. 실행 시간이 긴 코드를 UI 멈춤 없이 진행할 수 있다는 장점이 있다.
+
+> `이벤트 루프(Event Loop)`: 싱글 스레드 루프. 콜 스택이 비었는지 확인하고, 태스크 큐에 실행할 작업이 있는지 확인한다. 콜 스택이 비었고 실행할 태스크가 있으면 태스크는 태스크 큐에서 제거되고, 실행을 위해 콜 스택에 추가된다. 이 핻동을 `틱(tick)`이라 부른다.   
+`콜 스택(Call Stack)`: 현재 실행 중인 코드의 스택. 자바스크립트 엔진에는 메모리 힙과 콜 스택이 있으며, 코드는 실행될 때 `stack` 형태로 쌓인다.   
+`태스크 큐(Task Queue)`: 자바스크립트 엔진 밖에 있는, 비동기적으로 실행된 이벤트 콜백이 보관되는 영역. `queue` 형태로 보관된다.
