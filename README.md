@@ -55,6 +55,9 @@
 50. [static 클래스 멤버를 사용하는 이유는 무엇인가?](https://github.com/kuman514/JavaScriptCores/blob/main/static%20class%20member.md)
 51. [var와 let과 const 간의 차이점은 무엇인가?](https://github.com/kuman514/JavaScriptCores/blob/main/var%20let%20const.html)
 
+# 추가적인 질문
+1. [JavaScript의 스코프란 무엇인가?](https://github.com/kuman514/JavaScriptCores/blob/main/scope.html)
+
 # 참고자료 출처
 한국어 문서   
 [프론트엔드 면접 핸드북 1](https://blog.rhostem.com/posts/2020-04-12-fe-interview-handbook-js-1)   
