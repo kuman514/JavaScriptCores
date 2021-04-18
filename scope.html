@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript에서의 스코프란</title>
+  </head>
+  <body>
+    <script>
+        // 스코프(scope)는 참조 대상 식별자를 찾아내기 위한 규칙을 말한다.
+
+        // 전역 스코프란, 어떠한 함수에도 속하지 않은 영역, 즉 함수 영역 밖의 스코프이다.
+        // 함수 레벨 스코프 시작
+        function printTest () {
+            // 블록 레벨 스코프 시작
+            for (var i = 0; i < 3; i++) {
+                // let이나 const인 변수는 블록 레벨 스코프 변수이다.
+                let j = i * 2;
+                console.log(`j: ${j}`);
+            }
+            // 블록 레벨 스코프 종료
+
+            // var는 함수 레벨 스코프 변수이다.
+            console.log(`i: ${i}`);
+        }
+        // 함수 레벨 스코프 종료
+
+        // 변수 중복 선언 시, 가장 가까이 있는 스코프의 변수를 찾는다.
+        var num1 = 0;
+        let num2 = 0;
+        function incNum1 () {
+            // 전역 num1과 num2는 함수 레벨 안에 있는 num1 및 num2와 서로 다르다.
+            var num1 = 1;
+            let num2 = 3;
+            // 아래 문장의 num1, num2는 가장 가까운 함수 레벨 스코프 내의 num1, num2이다.
+            num1++;
+            num2++;
+            console.log(`num1: ${num1}`);
+            console.log(`num2: ${num2}`);
+        }
+        // 실행
+        incNum1();
+        // 전역 num1, num2 모두 변화없다.
+        console.log(`num1: ${num1}`);
+        console.log(`num2: ${num2}`);
+        // 블록 스코프에서 var 변수를 중복 선언하면 변화한다.
+        // JavaScript에서는 함수 밖이면 모든 var 변수는 전역이기 때문.
+        // let과 const 변수는 블록 레벨 스코프가 인정된다.
+        {
+            var num1 = 7;
+            let num2 = 10;
+        }
+        console.log(`num1: ${num1}`);
+        console.log(`num2: ${num2}`);
+
+        // 렉시컬 스코프(Lexical Scope)란, 함수가 어디서 실행되었는지가 아닌,
+        // 어디서 선언되었느냐에 따라 결정되는 상위 스코프를 말한다.
+        // JavaScript를 비롯한 대부분의 프로그래밍 언어들은 렉시컬 스코프를 따른다.
+        var x = 1;
+
+        function foo() {
+            var x = 10;
+            // bar()는 foo() 내의 스코프에서 선언되었다.
+            // JavaScript가 렉시컬 스코프를 따르지 않을 경우, x의 값은 10이라고 띄울 것이다.
+            bar();
+        }
+
+        // bar()는 전역에서 선언되었다.
+        // JavaScript가 렉시컬 스코프를 따를 경우, x의 값은 1이라고 띄울 것이다.
+        function bar() {
+            console.log(x);
+        }
+
+        foo(); // 1
+        bar(); // 1
+
+        // (보완 예정)
+        // 자료 출처: https://poiemaweb.com/js-scope
+    </script>
+  </body>
+</html>
