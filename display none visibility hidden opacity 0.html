@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>display: none, visibility: hidden, opacity: 0의 차이</title>
+    <style>
+      div {
+        width: 200px;
+        height: 200px;
+        background-color: blue;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <div>원래 표시되어야 할 상자</div>
+    <div style="display: none;">display: none 상자</div>
+    <div style="visibility: hidden" onclick="console.log('hidden click')">hidden 상자</div>
+    <div style="opacity: 0" onclick="console.log('0pacity click')">0pacity 상자</div>
+    <div>원래 표시되어야 할 상자 2</div>
+
+    <!-- display: none은 표시할 공간조차 없지만 -->
+    <!-- visibility: hidden과 opacity: 0은 width와 height가 정해져 있으면 표시할 공간은 남겨둔다 -->
+
+    <!-- 또, visibility: hidden은 클릭에 반응하지 않지만 -->
+    <!-- opacity: 0은 클릭에 반응한다 -->
+  </body>
+</html>
