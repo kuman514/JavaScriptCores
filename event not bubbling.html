@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html
+  onclick="console.log('html clicked')"
+  onfocus="console.log('html focused')"
+  onblur="console.log('html blurred')"
+>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>버블링이 되지 않는 이벤트</title>
+  </head>
+  <!-- 이벤트 버블링이란, DOM 이벤트가 상위 엘리먼트로 올라가는 현상이다. -->
+  <!-- 아래 코드에서, 버튼 클릭 시, 버튼이 클릭되었다는 이벤트부터 시작하여 -->
+  <!-- html 태그 클릭 이벤트까지 이벤트가 상위로 올라가는 것을 볼 수 있다. -->
+
+  <!-- 이벤트는 가장 최상단인 document까지 올라가는데, -->
+  <!-- 이 과정에서 만난 엘리먼트마다, 그 엘리먼트의 이벤트 리스너가 존재하면 실행하는 것을 반복한다. -->
+
+  <!-- 하지만, focus나 blur 등 일부 이벤트는 버블링되지 않는다.-->
+  <!-- 참고: https://developer.mozilla.org/en-US/docs/Web/API/Element/focus_event -->
+  <!-- 참고: https://developer.mozilla.org/en-US/docs/Web/API/Element/blur_event -->
+  <body
+    style="width: 100vw; height: 100vh; background-color: aqua"
+    onclick="console.log('body clicked')"
+    onfocus="console.log('body focused')"
+    onblur="console.log('body blurred')"
+  >
+    <div
+      id="content"
+      style="width: 50vw; height: 50vh; background-color: blue"
+      onclick="console.log('#content clicked')"
+      onfocus="console.log('#content focused')"
+      onblur="console.log('#content blurred')"
+    >
+      <div
+        id="buttons"
+        style="width: 25vw; height: 25vh; background-color: white"
+        onclick="console.log('#buttons clicked')"
+        onfocus="console.log('#buttons div focused')"
+        onblur="console.log('#buttons div blurred')"
+      >
+        <button
+          id="1"
+          onclick="console.log('#1 button clicked')"
+          onfocus="console.log('#1 button focused')"
+          onblur="console.log('#1 button blurred')"
+        >
+          1번 버튼
+        </button>
+        <button
+          id="2"
+          onclick="console.log('#2 button clicked')"
+          onfocus="console.log('#2 button focused')"
+          onblur="console.log('#2 button blurred')"
+        >
+          2번 버튼
+        </button>
+        <button
+          id="3"
+          onclick="console.log('#3 button clicked')"
+          onfocus="console.log('#3 button focused')"
+          onblur="console.log('#3 button blurred')"
+        >
+          3번 버튼
+        </button>
+        <button
+          id="4"
+          onclick="console.log('#4 button clicked')"
+          onfocus="console.log('#4 button focused')"
+          onblur="console.log('#4 button blurred')"
+        >
+          4번 버튼
+        </button>
+        <button
+          id="5"
+          onclick="console.log('#5 button clicked')"
+          onfocus="console.log('#5 button focused')"
+          onblur="console.log('#5 button blurred')"
+        >
+          5번 버튼
+        </button>
+      </div>
+    </div>
+  </body>
+</html>

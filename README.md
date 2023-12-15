@@ -61,6 +61,7 @@
 2. [화살표 함수((...) => {...})의 화살표(=>)가 의미하는 바가 무엇인가?](https://github.com/kuman514/JavaScriptCores/blob/main/arrow%20in%20arrow%20function.md)
 3. [순수 함수(Pure Function)란 무엇인가?](https://github.com/kuman514/JavaScriptCores/blob/main/pure%20function.md)
 4. [display: none, visibility: hidden, opacity: 0의 차이점은 무엇인가?](https://github.com/kuman514/JavaScriptCores/blob/main/display%20none%20visibility%20hidden%20opacity%200.html)
+5. [버블링이 되지 않는 이벤트는 무엇인가?](https://github.com/kuman514/JavaScriptCores/blob/main/event%20not%20bubbling.html)
 
 # 참고자료 출처
 한국어 문서
